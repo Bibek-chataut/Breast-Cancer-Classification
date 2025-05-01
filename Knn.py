@@ -48,8 +48,8 @@ input_df =pd.DataFrame([input_data])
 input_df = scaler_bc.transform(input_df)
 
 # Predict the result
-if st.sidebar.button('Predict'):
+if st.button('Predict'):
     prediction = knn_bc_model.predict(input_df)
-    st.sidebar.write(f"Prediction: {'Malignant' if prediction[0] == 1 else 'Benign'}")
+    st.write(f"Prediction: {'Malignant' if prediction[0] == 1 else 'Benign'}")
 
 
